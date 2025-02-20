@@ -1,9 +1,6 @@
 package me.tyrhaton.spigot_ImmortalLava.listeners;
 
 import me.tyrhaton.spigot_ImmortalLava.Spigot_ImmortalLava;
-import org.bukkit.Fluid;
-import org.bukkit.Material;
-import org.bukkit.block.Block;
 import org.bukkit.block.BlockState;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
