@@ -1,0 +1,4 @@
+name: Spigot_ImmortalLava
+version: '1.0-SNAPSHOT'
+main: me.tyrhaton.spigot_ImmortalLava.Spigot_ImmortalLava
+api-version: '1.20'
