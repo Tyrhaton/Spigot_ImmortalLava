@@ -1,0 +1,3 @@
+preventLavaPlacement: true
+preventLavaDestruction: true
+disableLavaBuckets: true
