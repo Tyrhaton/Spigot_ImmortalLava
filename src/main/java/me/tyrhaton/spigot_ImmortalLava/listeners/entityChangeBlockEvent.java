@@ -21,7 +21,8 @@ public class entityChangeBlockEvent implements Listener {
     }
     @EventHandler
     public void onEntityChangeBlock(EntityChangeBlockEvent event) {
-        System.out.println("[+] EntityChangeBlockEvent");
+        if (event.isCancelled()) return;
+
         if (event.getEntity() instanceof FallingBlock fallingBlock) {
             Location loc = fallingBlock.getLocation();
             Block blockAtLocation = loc.getBlock();

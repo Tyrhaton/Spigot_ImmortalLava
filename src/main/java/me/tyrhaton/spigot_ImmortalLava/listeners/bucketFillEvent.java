@@ -1,6 +1,7 @@
 package me.tyrhaton.spigot_ImmortalLava.listeners;
 
 import me.tyrhaton.spigot_ImmortalLava.Spigot_ImmortalLava;
+import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.event.EventHandler;
@@ -16,12 +17,12 @@ public class bucketFillEvent implements Listener {
     }
     @EventHandler
     public void onBucketFill(PlayerBucketFillEvent event) {
-        System.out.println("[+] PlayerBucketFillEvent");
+        if (event.isCancelled()) return;
 
         Block clickedBlock = event.getBlockClicked();
         if (clickedBlock.getType() == Material.LAVA) {
             event.setCancelled(true);
-            event.getPlayer().sendMessage("[-] You cannot pick up immortal lava!");
+            event.getPlayer().sendMessage(ChatColor.DARK_RED + "[-] You cannot pick up " + ChatColor.ITALIC +"Immortal lava!");
         }
     }
 

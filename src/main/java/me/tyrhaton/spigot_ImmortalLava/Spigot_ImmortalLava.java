@@ -1,8 +1,6 @@
 package me.tyrhaton.spigot_ImmortalLava;
 
-import me.tyrhaton.spigot_ImmortalLava.listeners.blockPlaceEvent;
-import me.tyrhaton.spigot_ImmortalLava.listeners.bucketFillEvent;
-import me.tyrhaton.spigot_ImmortalLava.listeners.entityChangeBlockEvent;
+import me.tyrhaton.spigot_ImmortalLava.listeners.*;
 import org.bukkit.plugin.java.JavaPlugin;
 
 
@@ -19,6 +17,10 @@ public final class Spigot_ImmortalLava extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new blockPlaceEvent(this), this);
         getServer().getPluginManager().registerEvents(new bucketFillEvent(this), this);
         getServer().getPluginManager().registerEvents(new entityChangeBlockEvent(this), this);
+        getServer().getPluginManager().registerEvents(new blockSpreadEvent(this), this);
+        getServer().getPluginManager().registerEvents(new bucketEmptyEvent(this), this);
+
+
 
     }
 
